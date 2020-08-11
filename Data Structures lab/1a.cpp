@@ -6,18 +6,18 @@ using namespace std;
 
 int main()
 {
-	int i, j, n, sum, a[20];      // Data variable initialization
-	int alg4(int[], int);	      
-	n = 0;		              // Assigning
-	std::cout << "\n\t Enter n value:";	
+	int i, j, n, sum, a[20];
+	int alg4(int a[20], int n);
+	n = 0;
+	std::cout << "\n\t Enter n value:";
 	std::cin >> n;
-	std::cout << "\n\t Enter array values:";
+	std::cout << "\n\t Enter array values: \n";
 	for (i = 0; i < n; i++) {
-		std::cout << "Enter array value" << i << ":";
-		std::cin >> a[i];                // Getting user array data
+		std::cout << "\n \t Enter array value" << ":";
+		std::cin >> a[i];
 	}
 
-	sum = alg4(a, n);      // calling function module and getting value
+	sum = alg4(a, n);
 	std::cout << "\n\t sum of linear algorithams is:" << sum;
 
 
@@ -30,11 +30,11 @@ int alg4(int a[20], int n)
 	maxsum = 0;
 	for (j = 0; j < n; j++)
 	{
-		thissum += a[j];	// summing next value	
-		if (thissum > maxsum)   // checking whether next is postive or not ?
-			maxsum = thissum;    // if +ve update maxsum
-		else if (thissum < 0)	// if its negative
-			thissum = 0;    // -ve leave the number update this number
+		thissum += a[j];
+		if (thissum > maxsum)
+			maxsum = thissum;
+		else if (thissum < 0)
+			thissum = 0;
 	}
-	return maxsum;     
+	return maxsum;
 }
